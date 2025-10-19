@@ -8,9 +8,9 @@ export default function Home() {
         <div className="flex gap-8 items-center">
           <p className="text-xl flex-1">
             Join me on a tarot journey to understand the unconcious mind and
-            gain valuable insight into your toughest questions. I'm new to this,
-            but just having fun, and we might discover something beautiful
-            together. I'm based in NYC and currently only doing readings in
+            gain valuable insight into your toughest questions. I&apos;m new to
+            this, but just having fun, and we might discover something beautiful
+            together. I&apos;m based in NYC and currently only doing readings in
             person!
           </p>
           <Image
