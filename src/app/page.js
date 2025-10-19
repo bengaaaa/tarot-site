@@ -23,6 +23,20 @@ export default function Home() {
             className="rounded-lg object-cover"
           />
         </div>
+        <div className="flex justify-evenly pt-10">
+          <div>
+            <h3 className="font-semibold">Price</h3>
+            <p>$50</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">Aprox. time</h3>
+            <p>30-60 min</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">Where</h3>
+            <p>A coffee shop</p>
+          </div>
+        </div>
       </main>
     </div>
   );
