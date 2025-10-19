@@ -29,7 +29,7 @@ export default function Home() {
             <p>$50</p>
           </div>
           <div>
-            <h3 className="font-semibold">Aprox. time</h3>
+            <h3 className="font-semibold">Approx. time</h3>
             <p>30-60 min</p>
           </div>
           <div>
