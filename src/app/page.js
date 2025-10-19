@@ -2,14 +2,16 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-8">
+    <div className="min-h-screen p-8 bg-amber-50">
       <main className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">Tarot with Ben</h1>
+        <h1 className="text-4xl font-bold text-center mb-8">
+          🔮 Tarot with Ben 🔮
+        </h1>
         <div className="flex gap-8 items-center">
           <p className="text-xl flex-1">
             {`Join me on a tarot journey to understand the unconcious mind and
             gain valuable insight into your toughest questions. I'm new to
-            this, but just having fun, and we might discover something beautiful
+            this, but just having fun, and we might discover something
             together. I'm based in NYC and currently only doing readings in
             person!`}
           </p>
