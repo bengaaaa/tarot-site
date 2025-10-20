@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-8 bg-amber-50">
+    <div className="min-h-screen p-8 bg-amber-50 text-black">
       <main className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">
           🔮 Tarot with Ben 🔮
@@ -23,9 +23,9 @@ export default function Home() {
             className="rounded-lg object-cover"
           />
         </div>
-        <div className="flex justify-evenly pt-10">
+        <div className="flex justify-evenly pt-10 text-2xl">
           <div>
-            <h3 className="font-semibold">Price</h3>
+            <h3 className="font-semibold ">Price</h3>
             <p>$50</p>
           </div>
           <div>
