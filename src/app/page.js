@@ -7,7 +7,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center mb-8">
           🔮 Tarot with Ben 🔮
         </h1>
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-8 items-center pb-10">
           <p className="text-xl flex-1">
             {`Join me on a tarot journey to understand the unconcious mind and
             gain valuable insight into your toughest questions. I'm new to
@@ -23,18 +23,18 @@ export default function Home() {
             className="rounded-lg object-cover"
           />
         </div>
-        <div className="flex justify-evenly pt-10 text-2xl">
+        <div className="flex justify-evenly pt-10">
           <div>
-            <h3 className="font-semibold ">Price</h3>
-            <p>$50</p>
+            <h3 className="font-semibold text-2xl">Price</h3>
+            <p className="text-xl">$50</p>
           </div>
           <div>
-            <h3 className="font-semibold">Approx. time</h3>
-            <p>30-60 min</p>
+            <h3 className="font-semibold text-2xl">Approx. time</h3>
+            <p className="text-xl">30-60 min</p>
           </div>
           <div>
-            <h3 className="font-semibold">Where</h3>
-            <p>A coffee shop</p>
+            <h3 className="font-semibold text-2xl">Where</h3>
+            <p className="text-xl">A coffee shop</p>
           </div>
         </div>
       </main>
