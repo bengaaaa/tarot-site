@@ -1,12 +1,24 @@
 import Image from "next/image";
+import SparkleEffect from "@/components/SparkleEffect";
+
+// ---- Ideas ----
+// Carousel of tarot cards on each edge rotating different directions
+// background color fades to purple and green at top and bottom
+// mobile friendly
+// intermittent sparkle effect
+// Music with ability to turn off? default off?
+// twitter handle in bottom left?
+
+// Virtual tarot spread?
+// shuffle button that actually shuffles array
+// ability to pick from anywhere in deck
 
 export default function Home() {
   return (
     <div className="min-h-screen p-8 bg-amber-50 text-black">
+      <SparkleEffect />
       <main className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">
-          🌙 Tarot With Ben ⭐
-        </h1>
+        <h1 className="text-4xl font-bold text-center mb-8">Tarot With Ben</h1>
         <div className="flex gap-8 items-center pb-10">
           <p className="text-2xl w-1/2">
             {`Join me on a tarot journey to understand the unconcious mind and
