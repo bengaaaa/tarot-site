@@ -15,14 +15,14 @@ import SparkleEffect from "@/components/SparkleEffect";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-8 text-black bg-gradient-to-b from-purple-200 via-amber-50 to-green-200">
+    <div className="min-h-screen p-4 sm:p-8 text-black bg-gradient-to-b from-purple-200 via-amber-50 to-green-200">
       <SparkleEffect />
       <main className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">Tarot With Ben</h1>
-        <div className="flex gap-8 items-center pb-10">
-          <p className="text-2xl w-1/2">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8">Tarot With Ben</h1>
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center pb-8 md:pb-10">
+          <p className="text-lg sm:text-2xl md:w-1/2">
             {`Join me on a tarot journey to understand the unconcious mind and
-            gain valuable insight into your toughest questions. I'm based in 
+            gain valuable insight into your toughest questions. I'm based in
             NYC and currently only doing readings in person!`}
           </p>
           <Image
@@ -30,21 +30,21 @@ export default function Home() {
             alt="Me in a sunglass shop"
             width={300}
             height={300}
-            className="rounded-lg object-cover mx-8"
+            className="rounded-lg object-cover md:mx-8 w-full max-w-xs md:max-w-none md:w-auto"
           />
         </div>
-        <div className="flex justify-evenly pt-10">
-          <div>
-            <h3 className="font-semibold text-2xl">Price</h3>
-            <p className="text-xl">$50</p>
+        <div className="flex flex-col sm:flex-row justify-evenly gap-6 sm:gap-4 pt-8 md:pt-10">
+          <div className="text-center sm:text-left">
+            <h3 className="font-semibold text-xl sm:text-2xl">Price</h3>
+            <p className="text-lg sm:text-xl">$50</p>
           </div>
-          <div>
-            <h3 className="font-semibold text-2xl">Approx. time</h3>
-            <p className="text-xl">30-60 min</p>
+          <div className="text-center sm:text-left">
+            <h3 className="font-semibold text-xl sm:text-2xl">Approx. time</h3>
+            <p className="text-lg sm:text-xl">30-60 min</p>
           </div>
-          <div>
-            <h3 className="font-semibold text-2xl">Where</h3>
-            <p className="text-xl">A coffee shop</p>
+          <div className="text-center sm:text-left">
+            <h3 className="font-semibold text-xl sm:text-2xl">Where</h3>
+            <p className="text-lg sm:text-xl">A coffee shop</p>
           </div>
         </div>
       </main>
