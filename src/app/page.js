@@ -15,7 +15,7 @@ import SparkleEffect from "@/components/SparkleEffect";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-8 bg-amber-50 text-black">
+    <div className="min-h-screen p-8 text-black bg-gradient-to-b from-purple-200 via-amber-50 to-green-200">
       <SparkleEffect />
       <main className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Tarot With Ben</h1>
