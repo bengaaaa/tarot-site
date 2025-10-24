@@ -2,6 +2,7 @@ import Image from "next/image";
 import SparkleEffect from "@/components/SparkleEffect";
 import ContactForm from "@/components/ContactForm";
 import TwitterIcon from "@/components/TwitterIcon";
+import TarotColumn from "@/components/TarotColumn";
 
 // ---- Ideas ----
 // Carousel of tarot cards on each edge rotating different directions
@@ -20,6 +21,8 @@ export default function Home() {
     <div className="min-h-screen p-4 sm:p-8 text-black bg-gradient-to-b from-purple-200 via-amber-50 to-green-200">
       <SparkleEffect />
       <TwitterIcon />
+      <TarotColumn side="left" direction="down" />
+      <TarotColumn side="right" direction="up" />
       <main className="max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8">
           Tarot With Ben
