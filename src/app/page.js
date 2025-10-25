@@ -18,14 +18,14 @@ import TarotColumn from "@/components/TarotColumn";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-4 sm:p-8 text-black bg-gradient-to-b from-purple-200 via-amber-50 to-green-200">
+    <div className="min-h-screen p-4 sm:p-8 text-black vintage-paper">
       <SparkleEffect />
       <TwitterIcon />
       <TarotColumn side="left" direction="down" />
       <TarotColumn side="right" direction="up" />
       <main className="max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8">
-          Tarot With Ben
+          FRIB TAROT
         </h1>
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center pb-8 md:pb-10">
           <p className="text-lg sm:text-2xl md:w-1/2">
@@ -41,18 +41,18 @@ export default function Home() {
             className="rounded-lg object-cover md:mx-8 w-full max-w-xs md:max-w-none md:w-auto"
           />
         </div>
-        <div className="flex flex-col sm:flex-row justify-evenly items-center gap-6 sm:gap-4 mt-8 md:mt-10 border-2 border-black rounded-lg p-6">
+        <div className="flex flex-col sm:flex-row justify-evenly items-center gap-6 sm:gap-4 mt-8 md:mt-10 vintage-box p-6">
           <div className="text-center">
-            <h3 className="font-semibold text-xl sm:text-2xl">Price</h3>
+            <h3 className="font-semibold text-xl sm:text-2xl">PRICE</h3>
             <p className="text-lg sm:text-xl">$50</p>
           </div>
           <div className="text-center">
-            <h3 className="font-semibold text-xl sm:text-2xl">Approx. time</h3>
+            <h3 className="font-semibold text-xl sm:text-2xl">TIME</h3>
             <p className="text-lg sm:text-xl">30-60 min</p>
           </div>
           <div className="text-center">
-            <h3 className="font-semibold text-xl sm:text-2xl">Where</h3>
-            <p className="text-lg sm:text-xl">A coffee shop</p>
+            <h3 className="font-semibold text-xl sm:text-2xl">LOCATION</h3>
+            <p className="text-lg sm:text-xl">A local coffee shop</p>
           </div>
         </div>
         <div className="mt-12 md:mt-16">

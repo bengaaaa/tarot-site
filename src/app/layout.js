@@ -1,29 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ebGaramond = EB_Garamond({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-garamond",
 });
 
 export const metadata = {
-  title: "Tarot with Ben",
+  title: "Frib",
   description: "Join Ben for tarot readings in NYC.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${ebGaramond.variable} antialiased`}>{children}</body>
     </html>
   );
 }

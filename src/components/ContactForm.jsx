@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    honeypot: '' // Bot trap field
+    name: "",
+    email: "",
+    message: "",
+    honeypot: "", // Bot trap field
   });
-  const [status, setStatus] = useState(''); // 'sending', 'success', 'error'
+  const [status, setStatus] = useState(""); // 'sending', 'success', 'error'
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -24,20 +24,21 @@ export default function ContactForm() {
 
     // Honeypot check - if filled, it's a bot
     if (formData.honeypot) {
-      console.log('Bot detected');
+      console.log("Bot detected");
       return;
     }
 
     // Rate limiting - check if submitted recently
-    const lastSubmitTime = localStorage.getItem('lastSubmitTime');
+    const lastSubmitTime = localStorage.getItem("lastSubmitTime");
     const now = Date.now();
-    if (lastSubmitTime && now - parseInt(lastSubmitTime) < 60000) { // 1 minute cooldown
-      setStatus('error');
-      setTimeout(() => setStatus(''), 5000);
+    if (lastSubmitTime && now - parseInt(lastSubmitTime) < 60000) {
+      // 1 minute cooldown
+      setStatus("error");
+      setTimeout(() => setStatus(""), 5000);
       return;
     }
 
-    setStatus('sending');
+    setStatus("sending");
 
     try {
       await emailjs.send(
@@ -51,24 +52,26 @@ export default function ContactForm() {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
-      setStatus('success');
-      setFormData({ name: '', email: '', message: '', honeypot: '' });
-      localStorage.setItem('lastSubmitTime', now.toString());
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "", honeypot: "" });
+      localStorage.setItem("lastSubmitTime", now.toString());
 
       // Reset success message after 5 seconds
-      setTimeout(() => setStatus(''), 5000);
+      setTimeout(() => setStatus(""), 5000);
     } catch (error) {
-      console.error('Email send failed:', error);
-      setStatus('error');
+      console.error("Email send failed:", error);
+      setStatus("error");
 
       // Reset error message after 5 seconds
-      setTimeout(() => setStatus(''), 5000);
+      setTimeout(() => setStatus(""), 5000);
     }
   };
 
   return (
-    <div className="max-w-md mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-center text-black">Contact Me</h2>
+    <div className="max-w-md mx-auto p-6">
+      <h2 className="text-2xl font-bold mb-6 text-center text-black">
+        CONTACT ME
+      </h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Honeypot field - hidden from users, catches bots */}
@@ -79,7 +82,7 @@ export default function ContactForm() {
           onChange={handleChange}
           tabIndex={-1}
           autoComplete="off"
-          style={{ position: 'absolute', left: '-9999px' }}
+          style={{ position: "absolute", left: "-9999px" }}
           aria-hidden="true"
         />
 
@@ -94,7 +97,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-black rounded text-black"
+            className="w-full px-3 py-2 border border-black text-black bg-white/50"
           />
         </div>
 
@@ -109,7 +112,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-black rounded text-black"
+            className="w-full px-3 py-2 border border-black text-black bg-white/50"
           />
         </div>
 
@@ -124,24 +127,28 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             rows={4}
-            className="w-full px-3 py-2 border border-black rounded text-black resize-none"
+            className="w-full px-3 py-2 border border-black text-black resize-none bg-white/50"
           />
         </div>
 
         <button
           type="submit"
-          disabled={status === 'sending'}
-          className="w-full py-2 px-4 bg-black hover:bg-gray-800 disabled:bg-gray-400 text-white rounded"
+          disabled={status === "sending"}
+          className="w-full py-2 px-4 bg-black hover:bg-gray-800 disabled:bg-gray-400 text-white"
         >
-          {status === 'sending' ? 'Sending...' : 'Send Message'}
+          {status === "sending" ? "Sending..." : "Send Message"}
         </button>
 
-        {status === 'success' && (
-          <p className="text-green-600 text-center text-sm">Message sent successfully!</p>
+        {status === "success" && (
+          <p className="text-green-600 text-center text-sm">
+            Message sent successfully!
+          </p>
         )}
 
-        {status === 'error' && (
-          <p className="text-red-600 text-center text-sm">Failed to send message. Please try again.</p>
+        {status === "error" && (
+          <p className="text-red-600 text-center text-sm">
+            Failed to send message. Please try again.
+          </p>
         )}
       </form>
     </div>

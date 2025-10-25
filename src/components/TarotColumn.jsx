@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 
 // All 78 tarot cards
@@ -87,11 +87,19 @@ const TAROT_CARDS = [
 
 export default function TarotColumn({ side = "left", direction = "down" }) {
   const columnRef = useRef(null);
+  const [displayCards, setDisplayCards] = useState([]);
+  const [mounted, setMounted] = useState(false);
 
-  // Shuffle and select 10 random cards for variety
-  const displayCards = useRef(
-    [...TAROT_CARDS].sort(() => Math.random() - 0.5).slice(0, 10)
-  );
+  // Shuffle and select 10 random cards after mount to avoid hydration mismatch
+  useEffect(() => {
+    setDisplayCards([...TAROT_CARDS].sort(() => Math.random() - 0.5).slice(0, 10));
+    setMounted(true);
+  }, []);
+
+  // Don't render until mounted to avoid hydration issues
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div
@@ -109,7 +117,7 @@ export default function TarotColumn({ side = "left", direction = "down" }) {
         }}
       >
         {/* Render cards twice for seamless loop */}
-        {[...displayCards.current, ...displayCards.current].map(
+        {[...displayCards, ...displayCards].map(
           (card, index) => (
             <div
               key={`${card}-${index}`}
