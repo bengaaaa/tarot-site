@@ -5,7 +5,7 @@ export default function Sparkle({ style }) {
         <path
           d="M10 0L11.5 7.5L19 9L11.5 10.5L10 18L8.5 10.5L1 9L8.5 7.5L10 0Z"
           fill="currentColor"
-          className="text-yellow-300"
+          className="text-yellow-500"
         />
       </svg>
     </div>
