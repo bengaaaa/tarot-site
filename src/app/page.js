@@ -25,7 +25,7 @@ export default function Home() {
       <TarotColumn side="right" direction="up" />
       <main className="max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8">
-          FRIB TAROT
+          TAROT WITH BEN
         </h1>
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center pb-8 md:pb-10">
           <p className="text-lg sm:text-2xl md:w-1/2">

@@ -7,7 +7,7 @@ const ebGaramond = EB_Garamond({
 });
 
 export const metadata = {
-  title: "Frib",
+  title: "Tarot With Ben",
   description: "Join Ben for tarot readings in NYC.",
 };
 
